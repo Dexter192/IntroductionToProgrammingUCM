@@ -13,7 +13,7 @@ public class A1_slow {
         //We use this to keep track of the longest sequence that we encounter
         int longestSequence = 0;
         //The highest n that we want to check
-        long maxN = 1000000;
+        long maxN = 100;
 
         /* This is a for loop (coming in lecture 3). The code block surrounded by the {} will be executed multiple times
          * until we reach a terminating condition. It consists of three parts, separated with semicolons
@@ -29,7 +29,7 @@ public class A1_slow {
             //We set n to the current value of i
             long n = i;
             //We want to keep track of the sequence length for the current n
-            int sequenceLength = 0;
+            int sequenceLength = 1;
             //We want to store the sequence in a string
             String sequence = "";
 
@@ -53,7 +53,7 @@ public class A1_slow {
             //Without this, we would miss the 1 at the end of the sequence
             sequence += n;
             //Print the sequence length and the sequence
-            System.out.println("Sequence length - " + sequenceLength + ": " + sequence);
+            System.out.println("n=" + i + "Sequence length - " + sequenceLength + ": " + sequence);
             //Since we want to find the longest sequence, we want to check if the current sequence is longer than the
             //sequence that we have had so far. If so, we update it.
             if(sequenceLength > longestSequence) {
