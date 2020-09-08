@@ -12,7 +12,8 @@ public class A1_slow {
     public static void main(String [] args) {
         //We use this to keep track of the longest sequence that we encounter
         int longestSequence = 0;
-        //The highest n that we want to check
+        //The highest n that we want to check. If you want to use 10,000,000,000, you have to append the number with
+        //a L to tell java that you are defining a long
         long maxN = 100;
 
         /* This is a for loop (coming in lecture 3). The code block surrounded by the {} will be executed multiple times
