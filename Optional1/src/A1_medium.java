@@ -5,6 +5,8 @@ public class A1_medium {
      * we know that the all the remaining numbers will be divided by two. The amount of how often we have to do that is
      * the log2(n).
      * E.g. n=16 sqrt(16)=4  16,8,4,2,1
+     * With some patience, this version can already come up with a solution for n=10,000,000,000 but it still takes time.
+     * We can make this even faster by using a sort of dynamical approach. 
      * If you don't understand the code, try to debug it before contacting me
      * @author Daniel Kaestner
      */
@@ -12,7 +14,7 @@ public class A1_medium {
             //We use this to keep track of the longest sequence that we encounter
             int longestSequence = 0;
             //The highest n that we want to check
-            long maxN = 100;
+            long maxN = 1000000;
 
             for(int i = 1; i <= maxN; i++) {
                 //We set n to the current value of i
@@ -33,10 +35,12 @@ public class A1_medium {
                     //We use the property which is explained above
                     if(Math.log(n)%2==0) {
                         sequenceLength += Math.log(n);
+                        //A break will allow us to leave the for loop early
                         break;
                     }
                 }
-                System.out.println("n=" + i + " Sequence length - " + sequenceLength);
+                //Comment this to increase the speed
+                //System.out.println("n=" + i + " Sequence length - " + sequenceLength);
                 if(sequenceLength > longestSequence) {
                     longestSequence = sequenceLength;
                 }
