@@ -6,6 +6,8 @@
  * The excessive use of comments is to provide a more explicit explanation of the code as some concepts which are not yet
  * covered are used.
  * If you don't understand the code, try to debug it before contacting me
+ *
+ * YOU CAN DRASTICALLY INCREASE THE SPEED BY COMMENTING OUT LINE 47 AND 59 SINCE THE STRINGS ARE NOT GENERATED IN EVERY ITERATION
  * @author Daniel Kaestner
  */
 public class A1_slow {
@@ -14,7 +16,7 @@ public class A1_slow {
         int longestSequence = 0;
         //The highest n that we want to check. If you want to use 10,000,000,000, you have to append the number with
         //a L to tell java that you are defining a long
-        long maxN = 100;
+        long maxN = 10000000;
 
         /* This is a for loop (coming in lecture 3). The code block surrounded by the {} will be executed multiple times
          * until we reach a terminating condition. It consists of three parts, separated with semicolons
