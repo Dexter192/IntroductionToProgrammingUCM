@@ -8,6 +8,7 @@ public class A1_medium {
      * With some patience, this version can already come up with a solution for n=10,000,000,000 but it still takes time.
      * We can make this even faster by using a sort of dynamical approach. 
      * If you don't understand the code, try to debug it before contacting me
+     *
      * @author Daniel Kaestner
      */
         public static void main(String [] args) {
